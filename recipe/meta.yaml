@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - ablog = ablog.commands:ablog_main
@@ -32,8 +32,16 @@ requirements:
     - sphinx-automodapi
 
 test:
+  requires:
+    - git
   commands:
     - ablog --version
+    - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
+    - cd ablog/docs
+    - ablog build -T
+    - ablog build -b latex -T -d .doctrees -w _latex
+    - ablog build -T -b json
+    - ablog build -T -b pickle
 
 about:
   home: https://github.com/sunpy/ablog
