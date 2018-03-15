@@ -35,6 +35,7 @@ test:
   requires:
     - git
   commands:
+    - ablog --version
     - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
     - cd ablog/docs
     - ablog build -T
