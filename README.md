@@ -16,9 +16,7 @@ project into a full-fledged blog.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ablog-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ablog-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/ablog-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ablog-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ablog-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ablog-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/ablog-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/ablog-feedstock)
 
 Current release info
 ====================
