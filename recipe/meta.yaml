@@ -34,6 +34,7 @@ requirements:
 test:
   requires:
     - git
+    - nbsphinx
   commands:
     - ablog --version
     - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
