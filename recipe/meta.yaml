@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.9.5" %}
-{% set sha256 = "54e0d61e58dd8fcf8a5102cb4ae0ef6374f966fe95e50330bfab412a51d09afd" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "ee9ec99584d8ae3cd9c0438af6ab57b06973cce7557898afc5126a1fb0eb8c40" %}
 
 package:
   name: {{ name|lower }}
@@ -12,24 +12,26 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ablog = ablog.commands:ablog_main
+  skip: true  # [py27]
 
 requirements:
   build:
     - python
     - pip
+    - setuptools_scm
   run:
     - python
     - werkzeug
-    - sphinx >=1.6
+    - sphinx >=2.0
     - alabaster
     - invoke
     - python-dateutil
     - sphinx-automodapi
+    - watchdog
 
 test:
   requires:
@@ -47,6 +49,7 @@ test:
 about:
   home: https://github.com/sunpy/ablog
   license: MIT
+  license_file: LICENSE.rst
   license_family: MIT
   summary: 'ABlog for blogging with Sphinx'
   description: |
@@ -58,4 +61,4 @@ about:
 extra:
   recipe-maintainers:
     - nabobalis
-    - rgrinberg
+    - cadair
