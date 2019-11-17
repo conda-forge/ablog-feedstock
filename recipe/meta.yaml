@@ -31,6 +31,7 @@ requirements:
     - invoke
     - python-dateutil
     - sphinx-automodapi
+    - watchdog
 
 test:
   requires:
