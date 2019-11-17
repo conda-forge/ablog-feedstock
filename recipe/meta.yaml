@@ -25,7 +25,7 @@ requirements:
   run:
     - python
     - werkzeug
-    - sphinx >=1.6
+    - sphinx >=2.0
     - alabaster
     - invoke
     - python-dateutil
@@ -59,4 +59,4 @@ about:
 extra:
   recipe-maintainers:
     - nabobalis
-    - rgrinberg
+    - cadair
