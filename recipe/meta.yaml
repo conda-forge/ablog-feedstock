@@ -16,7 +16,6 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ablog = ablog.commands:ablog_main
-  skip: true  # [py27]
 
 requirements:
   build:
@@ -25,7 +24,7 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - werkzeug<1.0.0
+    - werkzeug <1.0.0
     - sphinx >=2.0
     - alabaster
     - invoke
@@ -36,7 +35,7 @@ requirements:
 test:
   requires:
     - git
-    - nbsphinx<0.5.0
+    - nbsphin x<0.5.0
   commands:
     - ablog --version
     - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
