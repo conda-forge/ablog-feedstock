@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.2" %}
-{% set sha256 = "680afd56460d7afc6f484c63aaf41eaff03c82a50795929bc5e65036ec37c103" %}
+{% set version = "0.10.3" %}
+{% set sha256 = "20caf0c567e8b94f9a255467758ed847220df3490501d71c3cdfcddcbbec7860" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,6 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ablog = ablog.commands:ablog_main
-  skip: true  # [py27]
 
 requirements:
   build:
@@ -25,7 +24,7 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - werkzeug
+    - werkzeug <1.0.0
     - sphinx >=2.0
     - alabaster
     - invoke
@@ -36,7 +35,7 @@ requirements:
 test:
   requires:
     - git
-    - nbsphinx
+    - nbsphinx <0.5.0
   commands:
     - ablog --version
     - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
