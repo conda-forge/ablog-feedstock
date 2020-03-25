@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.3" %}
-{% set sha256 = "20caf0c567e8b94f9a255467758ed847220df3490501d71c3cdfcddcbbec7860" %}
+{% set version = "0.10.4" %}
+{% set sha256 = "31535e996d3b264a0e77504d0dec8c8657802eabd758671884673546f9800528" %}
 
 package:
   name: {{ name|lower }}
@@ -51,7 +51,7 @@ about:
   license: MIT
   license_file: LICENSE.rst
   license_family: MIT
-  summary: 'ABlog for blogging with Sphinx'
+  summary: ABlog for blogging with Sphinx
   description: |
     A Sphinx extension that converts any documentation or personal website
     project into a full-fledged blog.
