@@ -19,7 +19,7 @@ build:
   skip: true  # [py27]
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools_scm
