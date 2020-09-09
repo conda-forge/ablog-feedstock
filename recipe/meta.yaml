@@ -25,18 +25,19 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - werkzeug <1.0.0
     - sphinx >=2.0
-    - alabaster
     - invoke
+    - docutils
     - python-dateutil
-    - sphinx-automodapi
     - watchdog
-
+    - feedgen
+    
 test:
   requires:
     - git
-    - nbsphinx <0.5.0
+    - nbsphinx
+    - alabaster
+    - sphinx-automodapi
   commands:
     - ablog --version
     - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
