@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.7" %}
-{% set sha256 = "e8cda8a5dbc3ea6b58fec57d6d7fa047d009d5b35149d5c1b2659b1b273c26ec" %}
+{% set version = "0.10.8" %}
+{% set sha256 = "9efc2039355a9be0304251f439cf12323a2c0e28239efc082734309a0cfa7f3a" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ablog = ablog.commands:ablog_main
-  skip: true  # [py27]
+  noarch: python
 
 requirements:
   host:
@@ -25,26 +25,25 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - werkzeug <1.0.0
     - sphinx >=2.0
-    - alabaster
     - invoke
+    - docutils
     - python-dateutil
-    - sphinx-automodapi
     - watchdog
+    - feedgen
+    - nbsphinx
+    - pandoc
 
 test:
   requires:
     - git
-    - nbsphinx <0.5.0
+    - alabaster
+    - sphinx-automodapi
   commands:
     - ablog --version
     - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
-    - cd ablog/docs
-    - ablog build -T
-    - ablog build -b latex -T -d .doctrees -w _latex
-    - ablog build -T -b json
-    - ablog build -T -b pickle
+    - cd ablog
+    - make tests
 
 about:
   home: https://github.com/sunpy/ablog
