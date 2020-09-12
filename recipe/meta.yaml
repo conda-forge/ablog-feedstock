@@ -42,7 +42,7 @@ test:
   commands:
     - ablog --version
     - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
-    - make tests
+    - make test
 
 about:
   home: https://github.com/sunpy/ablog
