@@ -36,7 +36,6 @@ requirements:
 test:
   requires:
     - git
-    - nbsphinx
     - alabaster
     - sphinx-automodapi
   commands:
