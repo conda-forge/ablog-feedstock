@@ -31,7 +31,8 @@ requirements:
     - python-dateutil
     - watchdog
     - feedgen
-    
+    - nbsphinx
+
 test:
   requires:
     - git
