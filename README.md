@@ -5,9 +5,13 @@ Home: https://github.com/sunpy/ablog
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ablog-feedstock/blob/master/LICENSE.txt)
 
 Summary: ABlog for blogging with Sphinx
+
+Development: https://github.com/sunpy/ablog
+
+Documentation: http://ablog.readthedocs.org
 
 A Sphinx extension that converts any documentation or personal website
 project into a full-fledged blog.

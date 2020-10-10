@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.9" %}
-{% set sha256 = "53f84bb7f1942d6686f3faa19bf6f724a12df9b48061dbf512de0a641a4d982a" %}
+{% set version = "0.10.10" %}
+{% set sha256 = "564bd9f9d1d1fa3c97211f82790ccb90533ed90ee3f29de556839be4c7fd28f4" %}
 
 package:
   name: {{ name|lower }}
@@ -33,6 +33,7 @@ requirements:
     - feedgen
     - nbsphinx
     - pandoc
+    - myst-parser
 
 test:
   requires:
