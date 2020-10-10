@@ -33,6 +33,7 @@ requirements:
     - feedgen
     - nbsphinx
     - pandoc
+    - myst-parser
 
 test:
   requires:
