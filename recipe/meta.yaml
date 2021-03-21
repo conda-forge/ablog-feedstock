@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.13" %}
-{% set sha256 = "63fb27875fc170b50aadde1de7429315d6c2b3feeba5c2d9d1ef275e4cafce90" %}
+{% set version = "0.10.14" %}
+{% set sha256 = "0eb6ff3ff59ffda79343cbf0c0edc976583d11f36a09eac6ceabdef9b3de9e1d" %}
 
 package:
   name: {{ name|lower }}
@@ -20,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools_scm
   run:
-    - python
+    - python >=3.6
     - sphinx >=2.0
     - invoke
     - docutils
