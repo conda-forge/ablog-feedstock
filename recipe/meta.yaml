@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.21" %}
-{% set sha256 = "df201a96c28ec168397747e6db18b2796236bc7ffef101b5fec2f1c482de126f" %}
+{% set version = "0.10.22" %}
+{% set sha256 = "118cc85d1010c312a16b202f8dd81fd2451abc9a77975e413b72701d20db4f7e" %}
 
 package:
   name: {{ name|lower }}
@@ -40,10 +40,12 @@ test:
     - git
     - alabaster
     - sphinx-automodapi
+    - make
   commands:
     - ablog --version
-    - git clone --depth 1 --branch v{{ version }} https://github.com/sunpy/ablog
+    - git clone --depth 1 https://github.com/sunpy/ablog
     - cd ablog
+    - git switch -c v{{ version }}
     - make tests
 
 about:
