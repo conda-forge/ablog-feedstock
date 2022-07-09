@@ -20,12 +20,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools_scm
   run:
-    - python >=3.6
-    - sphinx >=2.0
+    - python >=3.7
+    - sphinx >=4.0
     - invoke
     - docutils
     - python-dateutil
@@ -40,6 +40,7 @@ test:
     - git
     - alabaster
     - sphinx-automodapi
+    - graphviz
     - make
   commands:
     - ablog --version
