@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.25" %}
-{% set sha256 = "92cef2431058c4ca9fc0bfbf505749e2b53b1df4cc4616f27ebdc353f95f0811" %}
+{% set version = "0.10.26" %}
+{% set sha256 = "ea9fa2a488540c2e55e6a7ab33aef9990fc041f22ac6e2d13e3829326d32ed3e" %}
 
 package:
   name: {{ name|lower }}
