@@ -42,11 +42,13 @@ test:
     - sphinx-automodapi
     - graphviz
     - make
+    - pytest
   commands:
     - ablog --version
     - git clone --depth 1 https://github.com/sunpy/ablog
     - cd ablog
     - git switch -c v{{ version }}
+    - pytest ./
     - make tests
 
 about:
