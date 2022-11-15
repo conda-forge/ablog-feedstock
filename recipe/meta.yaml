@@ -49,7 +49,7 @@ test:
     - cd ablog
     - git switch -c v{{ version }}
     - pytest ./
-    - make tests
+    # - make tests
 
 about:
   home: https://github.com/sunpy/ablog
