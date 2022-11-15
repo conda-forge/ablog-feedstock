@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.29" %}
-{% set sha256 = "ab6ce85c29a7cf38d74811852b3a2774e411cfb0a3669d300a25f16e0a571c80" %}
+{% set version = "0.10.32" %}
+{% set sha256 = "429d5ad8738756e0cc9a39e574f2ac2079974575639ba68dc70faeac5fbc6e70" %}
 
 package:
   name: {{ name|lower }}
@@ -42,12 +42,14 @@ test:
     - sphinx-automodapi
     - graphviz
     - make
+    - pytest
   commands:
     - ablog --version
     - git clone --depth 1 https://github.com/sunpy/ablog
     - cd ablog
     - git switch -c v{{ version }}
-    - make tests
+    - pytest ./
+    # - make tests
 
 about:
   home: https://github.com/sunpy/ablog
