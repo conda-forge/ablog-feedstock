@@ -1,11 +1,11 @@
-About ablog
-===========
+About ablog-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ablog-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/sunpy/ablog
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ablog-feedstock/blob/main/LICENSE.txt)
 
 Summary: ABlog for blogging with Sphinx
 

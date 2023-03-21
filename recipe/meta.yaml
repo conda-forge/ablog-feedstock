@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.10.33.post1" %}
-{% set sha256 = "fafad5438b08b425eb482ccd5f22a4ebfea80c13b27f20fb88d5b399c6c4fc14" %}
+{% set version = "0.11.1" %}
+{% set sha256 = "586babf045ae39e90500bec5738f9b162c2c9dab3807f3a032808620465f1b2d" %}
 
 package:
   name: {{ name|lower }}
@@ -20,12 +20,12 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.9
     - pip
     - setuptools_scm
   run:
-    - python >=3.7
-    - sphinx >=4.0
+    - python >=3.9
+    - sphinx >=5.0
     - invoke
     - docutils
     - python-dateutil
@@ -43,13 +43,14 @@ test:
     - graphviz
     - make
     - pytest
+    - setuptools_scm
   commands:
     - ablog --version
     - git clone --depth 1 https://github.com/sunpy/ablog
     - cd ablog
     - git switch -c v{{ version }}
-    - pytest ./
-    # - make tests
+    - pytest -p no:warnings ./
+    - make tests
 
 about:
   home: https://github.com/sunpy/ablog
