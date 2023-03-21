@@ -43,12 +43,13 @@ test:
     - graphviz
     - make
     - pytest
+    - setuptools_scm
   commands:
     - ablog --version
     - git clone --depth 1 https://github.com/sunpy/ablog
     - cd ablog
     - git switch -c v{{ version }}
-    - pytest ./
+    - pytest -p no:warnings ./
     - make tests
 
 about:
