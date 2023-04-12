@@ -34,6 +34,8 @@ requirements:
     - nbsphinx
     - pandoc
     - myst-parser
+    - packaging
+    - jinja2
 
 test:
   requires:
