@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.11.2" %}
-{% set sha256 = "2ddd92f6eea7c6dabccff72271e1f849f28c94ff0d0106ef60825c2820c90d58" %}
+{% set version = "0.11.3" %}
+{% set sha256 = "944ecb3e5df50b6262fcfdca8f8654329c33657f31e8298de8a198aa1c0df82e" %}
 
 package:
   name: {{ name|lower }}
@@ -34,6 +34,8 @@ requirements:
     - nbsphinx
     - pandoc
     - myst-parser
+    - packaging
+    - jinja2
 
 test:
   requires:
