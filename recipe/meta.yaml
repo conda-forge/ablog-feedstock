@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.11.6" %}
-{% set sha256 = "7d5e16e006a2ab2aee233dce43bfe51a430f30a9b28856be7dd53641e7900afb" %}
+{% set version = "0.11.8" %}
+{% set sha256 = "3e93417dae20d7897c826f7e3f13857363437b2d37d43ece86eb71d8e19479a9" %}
 
 package:
   name: {{ name|lower }}
@@ -70,3 +70,4 @@ extra:
   recipe-maintainers:
     - nabobalis
     - cadair
+    - wtbarnes
