@@ -153,4 +153,5 @@ Feedstock Maintainers
 
 * [@cadair](https://github.com/cadair/)
 * [@nabobalis](https://github.com/nabobalis/)
+* [@wtbarnes](https://github.com/wtbarnes/)
 
