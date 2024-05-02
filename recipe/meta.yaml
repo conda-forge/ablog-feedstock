@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.11.8" %}
-{% set sha256 = "3e93417dae20d7897c826f7e3f13857363437b2d37d43ece86eb71d8e19479a9" %}
+{% set version = "0.11.10" %}
+{% set sha256 = "1845a9a98452cbe31847103a88277eaa37683785fe0e22a9376c7992f72842a4" %}
 
 package:
   name: {{ name|lower }}
@@ -45,13 +45,12 @@ test:
     - graphviz
     - make
     - pytest
-    - setuptools_scm
   commands:
     - ablog --version
     - git clone --depth 1 https://github.com/sunpy/ablog
     - cd ablog
     - git switch -c v{{ version }}
-    - pytest -p no:warnings ./
+    - pytest -p no:warnings --pyargs ablog
     - make tests
 
 about:
