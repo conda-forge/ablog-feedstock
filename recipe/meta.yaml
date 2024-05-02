@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.9
     - pip
     - setuptools_scm
   run:
