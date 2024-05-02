@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python
     - pip
     - setuptools_scm
   run:
@@ -45,13 +45,12 @@ test:
     - graphviz
     - make
     - pytest
-    - setuptools_scm
   commands:
     - ablog --version
     - git clone --depth 1 https://github.com/sunpy/ablog
     - cd ablog
     - git switch -c v{{ version }}
-    - pytest -p no:warnings ./
+    - pytest -p no:warnings --pyargs ablog
     - make tests
 
 about:
