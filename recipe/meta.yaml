@@ -1,6 +1,6 @@
 {% set name = "ablog" %}
-{% set version = "0.11.11" %}
-{% set sha256 = "a236bc4302bf51c32b1e010fb2dd52461d26369ef8beff210532e69cd0d4d145" %}
+{% set version = "0.11.12" %}
+{% set sha256 = "1e6e1239973382adefc00eacc71125604fbfcb1e768a8a940b25fd078f0cea22" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -22,6 +22,7 @@ requirements:
   host:
     - python >=3.10
     - pip
+    - setuptools
     - setuptools_scm
   run:
     - python >=3.10
