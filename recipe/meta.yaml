@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "ablog" %}
 {% set version = "0.11.12" %}
 {% set sha256 = "1e6e1239973382adefc00eacc71125604fbfcb1e768a8a940b25fd078f0cea22" %}
@@ -12,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ablog = ablog.commands:ablog_main
@@ -20,12 +21,12 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - sphinx >=6.2
     - invoke
     - docutils
@@ -46,6 +47,7 @@ test:
     - graphviz
     - make
     - pytest
+    - python {{ python_min }}
   commands:
     - ablog --version
     - git clone --depth 1 https://github.com/sunpy/ablog
