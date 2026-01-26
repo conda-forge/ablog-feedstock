@@ -1,4 +1,4 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "ablog" %}
 {% set version = "0.11.13" %}
 {% set sha256 = "ae990d2c5c495ced6a33e0ec47d34355b828b81b97b6ad3786f682252d1ad36a" %}
