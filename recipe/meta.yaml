@@ -1,7 +1,7 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "ablog" %}
-{% set version = "0.11.12" %}
-{% set sha256 = "1e6e1239973382adefc00eacc71125604fbfcb1e768a8a940b25fd078f0cea22" %}
+{% set version = "0.11.13" %}
+{% set sha256 = "ae990d2c5c495ced6a33e0ec47d34355b828b81b97b6ad3786f682252d1ad36a" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - ablog = ablog.commands:ablog_main
